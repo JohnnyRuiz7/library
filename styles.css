@@ -1,0 +1,88 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+
+.table {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cards {
+    width: 90%;
+    height: 90%;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.book {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+    width: clamp(300px, 400px, 500px);
+    height: clamp(300px, 400px, 500px);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+#delete-book,
+#edit-book {
+    width: 30px;
+    height: auto;
+}
+
+#delete-book:hover,
+#edit-book:hover {
+    cursor: pointer;
+}
+
+#book-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+#book-author {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+#book-pages {
+    font-size: 1.5rem;
+}
+
+#book-checkbox {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+}
+
+#book-read {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
