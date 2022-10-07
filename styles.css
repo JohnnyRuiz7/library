@@ -13,12 +13,12 @@ body {
 .table {
     width: 100%;
     height: 100%;
-    margin: 2rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
+    opacity: 1;
 }
 
 .shelf {
@@ -26,14 +26,18 @@ body {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+}
+
+#add-book-button {
+    margin: 2rem 0 0 0;
 }
 
 .book {
     width: 20%;
     height: 20%;
     padding: 20px;
-    background-color: aquamarine;
+    margin-left: 50px;
+    background-color: #7fffd4;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -58,6 +62,7 @@ body {
 .delete-button:hover,
 .edit-button:hover {
     cursor: pointer;
+    background-color: #ff947f;
 }
 
 .book-title {
@@ -89,4 +94,43 @@ legend {
     justify-content: flex-start;
     align-items: center;
     column-gap: 10px;
+}
+
+#form-container {
+    position: fixed;
+    top: 20%;
+    width: 40%;
+    height: 60%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(216, 216, 216);
+    z-index: 9;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: 900;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    row-gap: 20px;
+    z-index: 9;
+}
+
+#form>label {
+    margin-bottom: -15px;
+}
+
+#cancel-button {
+    background-color: rgb(255, 106, 106);
+}
+
+#confirm-button {
+    background-color: rgb(103, 255, 103);
 }
