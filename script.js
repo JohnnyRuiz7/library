@@ -54,8 +54,10 @@ function addBookToLibrary() {
     myLibrary.push(new book(newBookName.value, newBookAuthor.value, newBookPages.value + ' pages', newBookRead.checked))
     deleteButton = document.querySelectorAll('.delete-button')
     editButton = document.querySelectorAll('.edit-button')
+    checkboxes = document.querySelectorAll('.book-checkbox')
     deleteButton.forEach(element => element.addEventListener('click', deleteBook))
     editButton.forEach(element => element.addEventListener('click', editBookForm))
+    checkboxes.forEach(element => element.addEventListener('click', updateReadStatus))
     formCancel()
   }
   else {
@@ -67,8 +69,10 @@ function addBookToLibrary() {
     myLibrary.push(new book(newBookName.value, newBookAuthor.value, newBookPages.value + ' pages', newBookRead.checked))
     deleteButton = document.querySelectorAll('.delete-button')
     editButton = document.querySelectorAll('.edit-button')
+    checkboxes = document.querySelectorAll('.book-checkbox')
     deleteButton.forEach(element => element.addEventListener('click', deleteBook))
     editButton.forEach(element => element.addEventListener('click', editBookForm))
+    checkboxes.forEach(element => element.addEventListener('click', updateReadStatus))
     formCancel()
   }
 }
