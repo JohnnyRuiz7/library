@@ -15,7 +15,7 @@ let checkboxes = document.querySelectorAll('.book-checkbox')
 let deleteButton = document.querySelectorAll('.delete-button')
 let editButton = document.querySelectorAll('.edit-button')
 let bookNumber = 0
-checkboxes[0].addEventListener('click', updateReadStatus)
+checkboxes[0].addEventListener('change', updateReadStatus)
 deleteButton[0].addEventListener('click', deleteBook)
 editButton[0].addEventListener('click', editBookForm)
 confirmBook.addEventListener('click', addBookToLibrary)
@@ -36,8 +36,9 @@ function updateLibrary(newBook) {
   newBook.childNodes[9].firstElementChild.checked = newBookRead.checked
 }
 
-function updateReadStatus() {
-  
+function updateReadStatus(readBox) {
+  let currentBookId = readBox.target.parentNode.parentNode.id.slice(-1)
+  myLibrary[currentBookId].read = readBox.target.checked
 }
 
 function addBookToLibrary() {
@@ -73,8 +74,12 @@ function addBookToLibrary() {
 }
 
 function deleteBook(book) {
-  book.target.parentNode.parentNode.parentNode.remove()
-  myLibrary.splice(book.target.parentNode.parentNode.parentNode.id.slice(-1), 1)
+  let selectedBook = book.target.parentNode.parentNode.parentNode
+  myLibrary.splice(selectedBook.id.slice(-1), 1)
+  for (let i = +selectedBook.id.slice(-1); i < myLibrary.length; i++) {
+    books[i+1].id = `book${i}`
+  }
+  selectedBook.remove()
   bookNumber--
 }
 
@@ -82,6 +87,10 @@ function editBookForm(e) {
   bookId = +e.target.parentNode.parentNode.parentNode.id.slice(-1)
   currentBook = e.target.parentNode.parentNode.parentNode
   formPopup()
+  newBookName.value = currentBook.childNodes[3].textContent
+  newBookAuthor.value = currentBook.childNodes[5].textContent
+  newBookPages.value = currentBook.childNodes[7].textContent.slice(0, -6)
+  newBookRead.checked = currentBook.childNodes[9].firstElementChild.checked
   confirmBook.removeEventListener('click', addBookToLibrary)
   confirmBook.addEventListener('click', editBook)
 }
