@@ -5,7 +5,6 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     font-family: 'Times New Roman', Times, serif;
     font-size: 32px;
 }
@@ -26,9 +25,10 @@ body {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 50px;
 }
 
-#add-book-button {
+.add-button-container {
     margin: 2rem 0 0 0;
 }
 
@@ -123,6 +123,12 @@ legend {
     z-index: 9;
 }
 
+#form-book-checkbox {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
 #form>label {
     margin-bottom: -15px;
 }
@@ -132,5 +138,5 @@ legend {
 }
 
 #confirm-button {
-    background-color: rgb(103, 255, 103);
+    background-color: rgb(106, 255, 106);
 }

@@ -18,7 +18,7 @@
             <label for="form-book-pages">Book pages</label>
             <input type="number" name="form-book-pages" id="form-book-pages" required>
             <div class="book-read">
-                <input type="checkbox" name="checkbox" class="book-checkbox" id="form-book-checkbox" value="read">
+                <input type="checkbox" name="checkbox" id="form-book-checkbox" value="read">
                 <legend for="checkbox">Read</legend>
             </div>
             <div id="action-buttons">
@@ -28,7 +28,9 @@
         </form>
     </div>
     <div class="table">
-        <div><button type="button" id="add-book-button">ADD NEW BOOK</button></div>
+        <div class="add-button-container">
+            <button type="button" id="add-book-button">ADD NEW BOOK</button>
+        </div>
         <div class="shelf">
             <div class="book" id="book0">
                 <div class="actions">
@@ -45,6 +47,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
