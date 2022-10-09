@@ -109,9 +109,9 @@ legend {
 
 #form-container {
     position: fixed;
-    top: 20%;
+    top: 15%;
     width: clamp(300px, 40%, 40%);
-    height: clamp(400px, 60%, 60%);
+    height: clamp(400px, 70%, 60%);
     display: none;
     flex-direction: column;
     justify-content: space-between;
