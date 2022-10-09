@@ -93,7 +93,7 @@ function editBookForm(e) {
     formPopup()
     newBookName.value = currentBook.childNodes[3].textContent
     newBookAuthor.value = currentBook.childNodes[5].textContent
-    parseInt(newBookPages.value).value = currentBook.childNodes[7].textContent.slice(0, -6)
+    newBookPages.value = currentBook.childNodes[7].textContent.slice(0, -6)
     newBookRead.checked = currentBook.childNodes[9].firstElementChild.checked
     confirmBook.removeEventListener('click', addBookToLibrary)
     confirmBook.addEventListener('click', editBook)
