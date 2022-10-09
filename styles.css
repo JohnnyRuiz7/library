@@ -110,7 +110,7 @@ legend {
 #form-container {
     position: fixed;
     top: 15%;
-    width: clamp(300px, 50%, 50%);
+    width: clamp(320px, 50%, 50%);
     height: clamp(450px, 70%, 70%);
     display: none;
     flex-direction: column;
@@ -127,7 +127,7 @@ legend {
     justify-content: center;
     font-weight: 900;
     padding: 20px;
-    width: 80%;
+    width: clamp(280px, 70%, 70%);
     height: 100%;
     row-gap: 20px;
     z-index: 9;
@@ -141,6 +141,12 @@ legend {
 
 #form>label {
     margin-bottom: -15px;
+}
+
+#action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 #cancel-button {
